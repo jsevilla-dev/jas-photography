@@ -147,17 +147,20 @@ body {
 /* Logo */
 .brand-logo { text-decoration: none; display: flex; align-items: center; gap: 0.9rem; }
 .bat-crest {
-  width: 36px; height: 36px;
-  border: 1px solid var(--border-amber);
-  background: rgba(245, 166, 35, 0.06);
+  width: 44px; height: 32px;
   display: flex; align-items: center; justify-content: center;
-  color: var(--amber);
   transition: var(--transition);
 }
-.brand-logo:hover .bat-crest {
-  background: var(--amber);
-  color: #050608;
-  box-shadow: 0 0 20px var(--amber-glow);
+.bat-crest img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px var(--amber-glow));
+  transition: var(--transition);
+}
+.brand-logo:hover .bat-crest img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 12px var(--amber));
 }
 .logo-text-group { display: flex; flex-direction: column; }
 .logo-main {
