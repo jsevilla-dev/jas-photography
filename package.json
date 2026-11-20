@@ -1,0 +1,9 @@
+{
+  "name": "jas-photography",
+  "version": "1.0.0",
+  "description": "Portfolio website for John Angelson Arellano (JAS Photography)",
+  "private": true,
+  "scripts": {
+    "start": "serve ."
+  }
+}
