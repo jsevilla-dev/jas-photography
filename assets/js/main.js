@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'portfolio-card';
         card.style.animationDelay = `${idx * 0.04}s`;
         card.innerHTML = `
-          <img src="${item.src}" alt="${item.title}" loading="lazy">
+          <img src="${item.src}" alt="${item.title}">
           <div class="portfolio-overlay">
             <span class="portfolio-badge">${item.tag}</span>
             <h4 class="portfolio-title">${item.title}</h4>
