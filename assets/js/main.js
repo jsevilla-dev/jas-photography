@@ -1,5 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Ultra-Smooth Inertial Scrolling (Lenis) ───────────
+  let lenis = null;
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.05,
+      touchMultiplier: 1.5,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Anchor Link Smooth Scrolling with Header Offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            lenis.scrollTo(targetEl, { offset: -70, duration: 1.2 });
+          }
+        }
+      });
+    });
+  }
+
   // ── Scroll Progress Bar ───────────────────────────────
   const bar = document.createElement('div');
   bar.className = 'scroll-progress';
@@ -48,7 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
   btt.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
   document.body.appendChild(btt);
   window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 500));
-  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  btt.addEventListener('click', () => {
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
 
   // ── Header Scroll + Scroll-spy ────────────────────────
   const header = document.querySelector('.site-header');
