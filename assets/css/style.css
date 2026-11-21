@@ -550,6 +550,75 @@ body {
   font-weight: 600;
 }
 
+/* ─── FILMS (CINEMATIC VIDEO SHOWCASE) ──────────────────── */
+.film-showcase-card {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.film-showcase-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.9);
+}
+.film-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000;
+}
+.film-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.film-info {
+  padding: 2rem 2.4rem;
+  background: linear-gradient(to bottom, #0e0e0e 0%, #080808 100%);
+  border-top: 1px solid var(--border-dark);
+}
+.film-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.film-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.film-duration {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+.film-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.film-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
 /* ─── SERVICES ───────────────────────────────────────────── */
 .services-grid { 
   display: grid; 
