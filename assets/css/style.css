@@ -555,15 +555,7 @@ body {
   background: rgba(255, 255, 255, 0.08); 
 }
 
-.service-num {
-  font-family: var(--font-display); font-size: 4.2rem;
-  color: var(--border-dark); line-height: 1;
-  position: absolute; top: 1.5rem; right: 2rem;
-  transition: color 0.4s ease;
-}
-.service-card:hover .service-num, .service-card.featured .service-num { 
-  color: rgba(255, 255, 255, 0.25); 
-}
+
 
 .service-card h4 {
   font-family: var(--font-display); font-size: 1.6rem;
@@ -995,10 +987,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
     border-radius: 6px;
     padding: 2.2rem 1.6rem;
   }
-  .service-num {
-    font-size: 3.2rem;
-    top: 1rem; right: 1.2rem;
-  }
+
   .service-card h4 {
     font-size: 1.4rem;
   }
