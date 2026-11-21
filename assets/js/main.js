@@ -123,31 +123,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Gallery Data — 100% Real JAS Photos ──────────────
   const items = [
-    // LANDSCAPES
-    { id:1, title:'Venice Canal at Twilight', category:'landscapes', tag:'Cityscape', src:'https://static.wixstatic.com/media/abf144_209161d0f0e448b49ead5e34f1bb9aec~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/IMG_5051_JPG.jpg', desc:'Venice Grand Canal at twilight — glowing canal lamps and water reflections.' },
-    { id:2, title:'Luminous Lantern Night', category:'landscapes', tag:'Night Photography', src:'https://static.wixstatic.com/media/abf144_8d64a70088ba4c1995681980be7bfd61~mv2.jpg/v1/fill/w_1200,h_820,al_c,q_85,enc_avif,quality_auto/IMG_6792_JPG.jpg', desc:'Illuminated hot air balloon lanterns floating against a deep night sky.' },
-    { id:3, title:'Windmill Under Starlight', category:'landscapes', tag:'Long Exposure', src:'https://static.wixstatic.com/media/abf144_34063d23970149158d8763dcae27aff6~mv2.jpg/v1/fill/w_1200,h_890,al_c,q_85,enc_avif,quality_auto/IMG_5072_JPG.jpg', desc:'Historic windmill silhouette under a clear starry sky.' },
-    { id:4, title:'Sunburst Through Canopy', category:'landscapes', tag:'Natural Light', src:'https://static.wixstatic.com/media/abf144_dc9ee7d8fac74018a0d591b955de7c74~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/IMG_0019.jpg', desc:'Dramatic sunburst through forest trees along a country road.' },
-    { id:5, title:'Golden Hour Trail', category:'landscapes', tag:'Macro & Flora', src:'https://static.wixstatic.com/media/abf144_c88488ad74224daa8a5f583f3d517851~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/IMG_0068.jpg', desc:'Macro golden hour capture of wild grass blades along a peaceful path.' },
-    { id:6, title:'Sunset Vista', category:'landscapes', tag:'Atmospheric', src:'https://static.wixstatic.com/media/abf144_bed9d7669979494dad6a4bf1683850a9~mv2.jpg/v1/fill/w_1200,h_700,al_c,q_85,enc_avif,quality_auto/IMG_0148.jpg', desc:'Serene landscape sunset vista with layered twilight gradients.' },
-    // PORTRAITS
-    { id:7, title:'Street Bokeh Portrait', category:'portraits', tag:'Editorial', src:'https://static.wixstatic.com/media/abf144_1a3f574ea9114c03a4df52a9f8675df2~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/IMG_6797_JPG.jpg', desc:'Moody golden bokeh evening portrait in side profile.' },
-    { id:8, title:'Vintage Balcony', category:'portraits', tag:'Personal Branding', src:'https://static.wixstatic.com/media/abf144_8ed6a895b3e04e3785c1fc39288b0f70~mv2.jpg/v1/fill/w_900,h_1340,al_c,q_85,enc_avif,quality_auto/IMG_1318_JPG.jpg', desc:'Contemplative portrait framed against vintage architectural ironwork.' },
-    { id:9, title:'Warm Candid Lifestyle', category:'portraits', tag:'Lifestyle', src:'https://static.wixstatic.com/media/abf144_795f9efbcd4b445ca32895c38168c73a~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/IMG_5056_JPG.jpg', desc:'Warm candid lifestyle smile captured with natural ambient backlight.' },
-    { id:10, title:'Editorial Street Fashion', category:'portraits', tag:'Fashion', src:'https://static.wixstatic.com/media/abf144_615fe037785f4865b80ede152a3f3d53~mv2.jpg/v1/fill/w_900,h_1340,al_c,q_85,enc_avif,quality_auto/IMG_5063_JPG.jpg', desc:'Clean street fashion vertical portrait highlighting texture and composure.' },
-    { id:11, title:'High Contrast Character', category:'portraits', tag:'Natural Light', src:'https://static.wixstatic.com/media/abf144_d22cd7d9d9314e73bd69d805405c3efe~mv2.jpg/v1/fill/w_900,h_1340,al_c,q_85,enc_avif,quality_auto/IMG_5863_JPG.jpg', desc:'High-contrast directional portrait emphasizing facial contour and tone.' },
-    // EVENTS & DEBUTS
-    { id:12, title:'Milestone Embrace', category:'events', tag:'Events', src:'https://static.wixstatic.com/media/abf144_57cb11b500b94841acb18201f5f37663~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/IMG_9138.jpg', desc:'Milestone couple embracing warmly on stage with flowers.' },
-    { id:13, title:'Ceremony Stage', category:'events', tag:'Events', src:'https://static.wixstatic.com/media/abf144_a672c6a1db3c4cf984fc88b1a913fd12~mv2.jpg/v1/fill/w_900,h_1340,al_c,q_85,enc_avif,quality_auto/IMG_2055.jpg', desc:'Vertical dynamic stage capture during formal celebration.' },
-    { id:14, title:'18 Candles Ceremony', category:'events', tag:'Debut', src:'assets/images/18_candles_IMG_5991.JPG', desc:'Intimate heartfelt messages during the 18 Candles debut ceremony.' },
-    { id:15, title:'18 Roses Cotillion', category:'events', tag:'Debut', src:'assets/images/18_roses_IMG_6654.JPG', desc:'Emotional father-daughter dance during the traditional 18 Roses.' },
-    { id:16, title:'Pre-Event Elegance', category:'events', tag:'Debut Prep', src:'assets/images/before_the_event_IMG_6704.JPG', desc:'Quiet anticipation and styling before the grand debut ball.' },
-    { id:17, title:'Debut Creative Portrait', category:'events', tag:'Debut Spotlight', src:'assets/images/creative_shots_IMG_6072.JPG', desc:'Creative spotlight portrait celebrating an 18th milestone.' },
-    // PRODUCT PHOTOGRAPHY
-    { id:18, title:'Leather Heritage Flatlay', category:'product', tag:'Commercial', src:'https://static.wixstatic.com/media/abf144_b15e1074eb4b4983942512d098870c52~mv2.jpg/v1/fill/w_1000,h_670,al_c,q_85,enc_avif,quality_auto/IMG_5871_edited.jpg', desc:'Leather accessories, eyeglasses, and canvas pouch flatlay.' },
-    { id:19, title:'Artisan Beverage', category:'product', tag:'Beverage Styling', src:'https://static.wixstatic.com/media/abf144_de239c1fa6f543059695b899fdcd438b~mv2.jpg/v1/fill/w_900,h_1120,al_c,q_85,enc_avif,quality_auto/JZRF9273_JPG.jpg', desc:'Commercial beverage styling highlighting product clarity and label.' },
-    { id:20, title:'Clean Studio Commercial', category:'product', tag:'Catalog', src:'https://static.wixstatic.com/media/abf144_169ac0bf39da4702a97b3c95ffd0d667~mv2.jpg/v1/fill/w_900,h_1120,al_c,q_85,enc_avif,quality_auto/STJN2213_JPG.jpg', desc:'Studio softbox lighting for e-commerce and retail campaigns.' },
-    { id:21, title:'Lifestyle Everyday Carry', category:'product', tag:'Brand Lifestyle', src:'https://static.wixstatic.com/media/abf144_a2580cd59c184e48b3a5adbf074423cb~mv2.jpg/v1/fill/w_1200,h_720,al_c,q_85,enc_avif,quality_auto/IMG_5875_JPG.jpg', desc:'Lifestyle product arrangement for modern consumer brands.' }
+    // RHYLEE — PRE-DEBUT
+    { id:1, title:'Ethereal Daylight Portrait', category:'rhylee-predebut', tag:'Rhylee Pre-Debut', src:'assets/images/portfolio/rhylee_predebut_1.jpg', desc:'Cinematic daylight portrait capturing radiant poise and youth.' },
+    { id:2, title:'Golden Hour Editorial', category:'rhylee-predebut', tag:'Rhylee Pre-Debut', src:'assets/images/portfolio/rhylee_predebut_2.jpg', desc:'Rich warm tones and natural backlighting highlighting delicate expression.' },
+    { id:3, title:'Contemporary Character Pose', category:'rhylee-predebut', tag:'Rhylee Pre-Debut', src:'assets/images/portfolio/rhylee_predebut_3.jpg', desc:'Dynamic editorial composition with high-fashion character aesthetics.' },
+    { id:4, title:'Soft Twilight Gaze', category:'rhylee-predebut', tag:'Rhylee Pre-Debut', src:'assets/images/portfolio/rhylee_predebut_4.jpg', desc:'Soft evening ambient framing creating an intimate timeless portrait.' },
+    { id:5, title:'Atmospheric Garden Editorial', category:'rhylee-predebut', tag:'Rhylee Pre-Debut', src:'assets/images/portfolio/rhylee_predebut_5.jpg', desc:'Natural floral surroundings and balanced directional natural light.' },
+    { id:6, title:'Candid Grace & Contemplation', category:'rhylee-predebut', tag:'Rhylee Pre-Debut', src:'assets/images/portfolio/rhylee_predebut_6.jpg', desc:'Spontaneous candid capture emphasizing quiet elegance.' },
+
+    // CHEL — PRE-DEBUT
+    { id:7, title:'Classic White Gown Elegance', category:'chel-predebut', tag:'Chel Pre-Debut', src:'assets/images/portfolio/chel_predebut_1.jpg', desc:'Timeless bridal-inspired pre-debut gown portrait with crisp contrast.' },
+    { id:8, title:'Cinematic Studio Spotlight', category:'chel-predebut', tag:'Chel Pre-Debut', src:'assets/images/portfolio/chel_predebut_2.jpg', desc:'Controlled studio keylight bringing out intricate wardrobe details.' },
+    { id:9, title:'Graceful Movement & Silhouette', category:'chel-predebut', tag:'Chel Pre-Debut', src:'assets/images/portfolio/chel_predebut_3.jpg', desc:'Flowing silhouette framing and refined editorial poise.' },
+    { id:10, title:'Close-up Editorial Beauty', category:'chel-predebut', tag:'Chel Pre-Debut', src:'assets/images/portfolio/chel_predebut_4.jpg', desc:'Detailed beauty headshot with soft studio gradation.' },
+    { id:11, title:'Regal Formal Composition', category:'chel-predebut', tag:'Chel Pre-Debut', src:'assets/images/portfolio/chel_predebut_5.jpg', desc:'Formal stylized aesthetic celebrating the debutante’s grand milestone.' },
+    { id:12, title:'Warm Ambient Glamour', category:'chel-predebut', tag:'Chel Pre-Debut', src:'assets/images/portfolio/chel_predebut_6.jpg', desc:'Warm editorial spotlight framing celebratory sophistication.' },
+
+    // CHEL — DEBUT NIGHT
+    { id:13, title:'Before the Grand Entrance', category:'chel-debut', tag:'Chel Debut Night', src:'assets/images/portfolio/chel_debut_1.jpg', desc:'Quiet anticipation and final styling touches before entering the ballroom.' },
+    { id:14, title:'The Traditional 18 Roses', category:'chel-debut', tag:'Chel Debut Night', src:'assets/images/portfolio/chel_debut_2.jpg', desc:'Emotional cotillion dance surrounded by loved ones.' },
+    { id:15, title:'18 Candles Ceremony', category:'chel-debut', tag:'Chel Debut Night', src:'assets/images/portfolio/chel_debut_3.jpg', desc:'Heartfelt speeches and intimate candlelit wishes.' },
+    { id:16, title:'The 18 Blue Bills Milestone', category:'chel-debut', tag:'Chel Debut Night', src:'assets/images/portfolio/chel_debut_4.jpg', desc:'Festive generosity and joyful laughter from family and godparents.' },
+    { id:17, title:'18 Festive Celebration Shots', category:'chel-debut', tag:'Chel Debut Night', src:'assets/images/portfolio/chel_debut_5.jpg', desc:'Spontaneous cheering, toasts, and memorable party energy.' },
+    { id:18, title:'Blowing of Candles & Grand Finale', category:'chel-debut', tag:'Chel Debut Night', src:'assets/images/portfolio/chel_debut_6.jpg', desc:'The climactic birthday wish and commemorative ballroom group capture.' },
+
+    // GRAND DEBUT MILESTONES
+    { id:19, title:'Creative Spotlight Portrait', category:'debut-event', tag:'Debut Moments', src:'assets/images/portfolio/debut_event_1.jpg', desc:'Dramatic artistic lighting accentuating the debutante gown and glamour.' },
+    { id:20, title:'Behind the Scenes Preparations', category:'debut-event', tag:'Debut Moments', src:'assets/images/portfolio/debut_event_2.jpg', desc:'Candid documentary coverage of gown fitting and bridal prep.' },
+    { id:21, title:'Ballroom Pre-Event Elegance', category:'debut-event', tag:'Debut Moments', src:'assets/images/portfolio/debut_event_3.jpg', desc:'Stunning portrait in the quiet venue moments before guests arrive.' },
+    { id:22, title:'Father-Daughter Dance Embrace', category:'debut-event', tag:'Debut Moments', src:'assets/images/portfolio/debut_event_4.jpg', desc:'Deeply poignant emotional connection during the 18 Roses dance.' },
+    { id:23, title:'Candlelight Wishes & Tears', category:'debut-event', tag:'Debut Moments', src:'assets/images/portfolio/debut_event_5.jpg', desc:'Warm bokeh and moving testimonials during the 18 Candles ceremony.' },
+    { id:24, title:'Grand Toast & Toasting Memories', category:'debut-event', tag:'Debut Moments', src:'assets/images/portfolio/debut_event_6.jpg', desc:'Joyous toast with best friends, cotillion court, and companions.' }
   ];
 
   // ── Gallery Render ────────────────────────────────────
