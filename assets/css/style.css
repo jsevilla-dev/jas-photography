@@ -219,7 +219,7 @@ body {
   text-transform: uppercase; margin-bottom: 1.8rem;
   font-weight: 400;
 }
-.hero-title .line-amber { 
+.hero-title .hero-highlight { 
   color: #ffffff; 
   display: block; 
   text-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
